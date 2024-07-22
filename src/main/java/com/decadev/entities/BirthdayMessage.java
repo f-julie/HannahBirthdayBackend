@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "books")
-public class Book {
+@Table(name = "messages")
+public class BirthdayMessage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,10 +22,10 @@ public class Book {
     @Column(name = "published_at")
     LocalDate publishedAt;
 
-    public Book() {
+    public BirthdayMessage() {
     }
 
-    public Book(String title, String description, String author, LocalDate publishedAt) {
+    public BirthdayMessage(String title, String description, String author, LocalDate publishedAt) {
         this.title = title;
         this.description = description;
         this.author = author;
